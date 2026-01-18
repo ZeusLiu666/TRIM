@@ -1,0 +1,15 @@
+FE_activation: relu
+FE_conv_padding: 0
+FE_conv_stride: 1
+FE_dropout_conv: 0.3
+FE_filters: 64
+FE_kernel_size: 5
+FE_ln_epsilon: 0.007
+FE_num_conv_layers: 4
+FE_residual: false
+huber_beta: 1.0
+lr: 0.001
+r2_lambda: 0.1
+target_col: TE_value
+use_huber: true
+use_r2_in_loss: true
