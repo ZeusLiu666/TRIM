@@ -158,8 +158,8 @@ class ValScatterPlot5U(pl.Callback):
 def main():
     pl.seed_everything(42, workers=True)
 
-    train_csv = "../TRIM_with_TSS/data/filtered_dataset/filtered_dataset.train.csv"
-    val_csv = "../TRIM_with_TSS/data/filtered_dataset/filtered_dataset.val.csv"
+    train_csv = "../TRIM/data/filtered_dataset/filtered_dataset.train.csv"
+    val_csv = "../TRIM/data/filtered_dataset/filtered_dataset.val.csv"
 
     train_ds = Dataset_5U(train_csv)
     val_ds = Dataset_5U(val_csv)
