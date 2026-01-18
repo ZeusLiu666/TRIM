@@ -33,7 +33,6 @@ def get_cfg():
         # Input CSV path
         "in_csv_path": "data/RPL8A_double_mutations_input.csv",
         # Path to the trained Expert_5U checkpoint
-        # "ckpt_path": "outputs_5U/logs/version_1/checkpoints/local200-epoch=184-val/r2_reg=0.737.ckpt",
         "ckpt_path": "outputs_5U/logs/version_0/checkpoints/local200-epoch=160-val/r2_reg=0.785.ckpt",
         # Output CSV path (will contain the prediction column)
         "out_csv_path": "outputs_5U/predict/RPL8A_double_mutations_input.with_pred.csv",
