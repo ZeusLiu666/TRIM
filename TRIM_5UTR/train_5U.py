@@ -25,12 +25,9 @@ def plot_loss_curves_from_csv(log_dir: str, out_dir: str | None = None):
     """
     metrics_csv = os.path.join(log_dir, "metrics.csv")
     if not os.path.exists(metrics_csv):
-        print(f"[Plot-5U] metrics.csv 不存在: {metrics_csv}")
+        print(f"[Plot-5U] metrics.csv not found: {metrics_csv}")
         return
     df = pd.read_csv(metrics_csv)
-    if "epoch" not in df.columns:
-        print("[Plot-5U] metrics.csv 缺少 epoch 列，无法汇总。")
-        return
 
     # —— Ensuring sving directoty ——
     save_dir = out_dir or os.path.join(log_dir, "figures")
