@@ -17,6 +17,7 @@ dependencies:
   - tensorboardx==2.6.2.2
   - mlflow==3.7.0
   - ipykernel
+  - viennarna=2.7.2
 
   - pip:
       - --extra-index-url https://download.pytorch.org/whl/cu124

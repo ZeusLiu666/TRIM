@@ -129,4 +129,5 @@ python predict_5U.py
   - matplotlib==3.5.2
   - matplotlib-inline==0.1.6
   - seaborn>=0.13.2
+  - viennarna=2.7.2
 ```
