@@ -26,6 +26,6 @@ This repository is for a submitted paper: A Transformer-based Multi-Branch Frame
   * `r2_reg=0.795.ckpt` is the best saved checkpoint for TRIM
   * `r2_reg=0.785.ckpt` is the best saved checkpoint for TRIM_5UTR
 
-
+# Dependencies
 
  **Further details to be updated... Last update: 2026.1.18**
