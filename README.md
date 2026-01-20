@@ -2,30 +2,107 @@
 
 This repository is for a submitted paper: A Transformer-based Multi-Branch Framework for Translation Efficiency in *S. Cerevisiae*
 
+# How to clone
+
+1. Clone the repository:
+
+  ```bash
+  git clone https://github.com/ZeusLiu666/TRIM.git
+  cd TRIM
+  ```
+
+2. Install the dependencies
+
+  **Option A: Install using Mamba/Conda (Recommended)**
+
+  ```bash
+  conda env create -f environment.yml
+  conda activate TRIM
+  ```
 
 
-# How to start
+# Essential Files Needed
 
-1. Download TRIM and TRIM_5UTR for the source codes, preprocessors and best model checkpoints can be found with link: https://zenodo.org/records/18288488?preview=1 (temporary link)
+1. You'll need to download the following files **FOR ALL POSSIBLE PURPOSES**:
 
-2. Customize your own input in the required format for TRIM to make predictions.(Test input is also given under TRIM/data/test_input.txt.)
-3. Download necessary dependencies(Detailed in Dependencies) and change the corresponding file path in TRIM/predict_with_rand_seq.py
-4. Run `predict_with_rand_seq.py`
-5. View the prediction results under TRIM/outputs/.
+  * `target_TE_value_zscaler.pkl` for Z-score normalization and denormalization;
+  
+  * `Gene_utr_struct.jsonl` for secondary structure information;
 
+  * `env_preproc.joblib` for env input encoding.
 
+2. Put the files above under a specified path.
+
+  * You can choose wherever you like. If so, don't forget to accordingly change the path in the codes.
+
+  * The path is set by default at:
+  ```TRIM/data/preprocessor/```
+
+These files can be downloaded from zenodo: https://zenodo.org/records/18288488?preview=1 (temporary link)
+
+# Predict with the best model weights
+
+1. The data preprocessors and best checkpoints can be found on zenodo: https://zenodo.org/records/18288488?preview=1 (temporary link)
+
+  * For just loading the best model, you need only `r2_reg=0.795.ckpt` for TRIM and `r2_reg=0.785.ckpt` for TRIM_5UTR. 
+
+2. Put the best checkpoint under a specified path.
+
+  * You can choose wherever you like. If so, don't forget to accordingly change the path in the codes.
+
+  * The path of TRIM is set by default at:
+  ```
+  TRIM/outputs/logs/version_0/checkpoints/best-epoch=022-val/r2_reg=0.795.ckpt
+  ```
+
+  * The path of TRIM_5UTR is set by default at:
+  ```
+  TRIM_5UTR/outputs/logs/version_0/checkpoints/local200-epoch=160-val/r2_reg=0.785.ckpt
+  ```
+
+## For TRIM to make prediction:
+1. Customize your own input in the required format for TRIM to make predictions.
+
+* The example input `example_input.csv` is updated on zenodo.
+
+2. Specify the file you want to predict. Run `predict_with_rand_seq.py`.
+
+```bash
+python predict_with_rand_seq.py
+```
+
+3. View the prediction result under the same input path. The output file replace the input file's `.csv` with `_with_pred.csv`. 
+
+## For TRIM_5UTR to make prediction:
+
+1. Customize your own input in the required format for TRIM_5UTR to make predictions.
+
+* The example input `test_input.csv` is updated on zenodo.
+
+2. Specify the file you want to predict. Run `predict_with_rand_seq.py`.
+
+```bash
+python predict_with_rand_seq.py
+```
+
+3. View the prediction result under the same input path. The output file replace the input file's `.csv` with `_with_pred.csv`. 
 
 # Supplementary File for TRIM
 
 * Datasets:
+
   * `filtered_dataset.txt`  is the overall dataset for TIRM
+
   * `filtered_dataset.test.csv`,`filtered_dataset.train.csv`,`filtered_dataset.val.csv` refer to the corresponding dataset in different stages of training, test, and validation.
+
 * Preprocessors:
+
   * `env_preproc.joblib`, `Gene_utr_struct.jsonl`, `target_TE_value_zscaler.pkl` are TRIM's preprocessors.
+
 * Best model checkpoints:
-  * `r2_reg=0.795.ckpt` is the best saved checkpoint for TRIM
-  * `r2_reg=0.785.ckpt` is the best saved checkpoint for TRIM_5UTR
+
+  * `r2_reg=0.795.ckpt` is the best checkpoint for **TRIM**
+
+  * `r2_reg=0.785.ckpt` is the best checkpoint for **TRIM_5UTR**
 
 # Dependencies
-
- **Further details to be updated... Last update: 2026.1.18**

@@ -140,7 +140,7 @@ if __name__ == "__main__":
     CKPT_PATH = (
         "outputs/logs/version_0/checkpoints/best-epoch=022-val/r2_reg=0.795.ckpt"
     )
-    CSV_PATH = "data/filtered_dataset/20_Gene_Predict.csv"
+    CSV_PATH = "data/example_input.csv"
     ENV_PREPROC_PATH = "data/preprocessor/env_preproc.joblib"
     TARGET_SCALER_PATH = "data/preprocessor/target_TE_value_zscaler.pkl"
     BATCH_SIZE = 512

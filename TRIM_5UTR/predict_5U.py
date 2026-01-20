@@ -31,11 +31,11 @@ def get_cfg():
     """
     return {
         # Input CSV path
-        "in_csv_path": "data/RPL8A_double_mutations_input.csv",
+        "in_csv_path": "data/test_input.txt",
         # Path to the trained Expert_5U checkpoint
-        "ckpt_path": "outputs_5U/logs/version_0/checkpoints/local200-epoch=160-val/r2_reg=0.785.ckpt",
+        "ckpt_path": "outputs/logs/version_0/checkpoints/local200-epoch=160-val/r2_reg=0.785.ckpt",
         # Output CSV path (will contain the prediction column)
-        "out_csv_path": "outputs_5U/predict/RPL8A_double_mutations_input.with_pred.csv",
+        "out_csv_path": "outputs/predict/test_input.with_pred.csv",
         # Encoding parameters (Must match Dataset_5U configuration)
         "L": 200,
         "utr_tail_len": 150,
