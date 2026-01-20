@@ -1,0 +1,33 @@
+name: trim
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy>=1.22.4
+  - pandas>=1.4.2
+  - scipy>=1.8.1
+  - scikit-learn>=1.0.2
+  - matplotlib>=3.5.2
+  - seaborn>=0.13.2
+  - statsmodels
+  - biopython
+  - openpyxl
+  - tqdm
+  - tensorboardx
+  - mlflow
+  - ipykernel
+
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu124
+      - torch==2.5.1
+      - torchvision==0.20.1
+      - pytorch-lightning==2.6.0
+      - torchmetrics==1.8.2
+      - logomaker==0.8.7
+      - python-docx==1.2.0
+      - python-dotenv
+      - pure_eval
