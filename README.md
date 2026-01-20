@@ -36,11 +36,11 @@ This repository is for a submitted paper: A Transformer-based Multi-Branch Frame
   * The path is set by default at:
   ```TRIM/data/preprocessor/```
 
-These files can be downloaded from zenodo: https://zenodo.org/records/18288488?preview=1 (temporary link)
+These files can be downloaded from zenodo: [https://zenodo.org/records/18288488?preview=1](https://zenodo.org/records/18288488?preview=1) (temporary link)
 
 # Predict with the best model weights
 
-1. The data preprocessors and best checkpoints can be found on zenodo: https://zenodo.org/records/18288488?preview=1 (temporary link)
+1. The data preprocessors and best checkpoints can be found on zenodo: [https://zenodo.org/records/18288488?preview=1](https://zenodo.org/records/18288488?preview=1) (temporary link)
 
   * For just loading the best model, you need only `r2_reg=0.795.ckpt` for TRIM and `r2_reg=0.785.ckpt` for TRIM_5UTR. 
 
