@@ -11,9 +11,7 @@ This repository is for a submitted paper: A Transformer-based Multi-Branch Frame
   cd TRIM
   ```
 
-2. Install the dependencies
-
-  **Option A: Install using Mamba/Conda (Recommended)**
+2. Build with mamba
 
   ```bash
   conda env create -f environment.yml
@@ -79,13 +77,13 @@ python predict_with_rand_seq.py
 
 * The example input `test_input.csv` is updated on zenodo.
 
-2. Specify the file you want to predict. Run `predict_with_rand_seq.py`.
+2. Specify the file you want to predict. Run `predict_5U.py`.
 
 ```bash
-python predict_with_rand_seq.py
+python predict_5U.py
 ```
 
-3. View the prediction result under the same input path. The output file replace the input file's `.csv` with `_with_pred.csv`. 
+3. View the prediction result under the output path: `outputs/predict/`
 
 # Supplementary File for TRIM
 
@@ -106,3 +104,29 @@ python predict_with_rand_seq.py
   * `r2_reg=0.785.ckpt` is the best checkpoint for **TRIM_5UTR**
 
 # Dependencies
+```bash
+  - python==3.10
+  - pip
+  - numpy==1.22.4
+  - pandas==1.4.2
+  - scipy==1.8.1
+  - statsmodels==0.14.6
+  - biopython==1.86
+  - openpyxl==3.1.5
+  - tqdm==4.67.1
+  - tensorboardx==2.6.2.2
+  - mlflow==3.7.0
+  - ipykernel
+  - torch==2.5.1+cu124
+  - torchvision==0.20.1+cu124
+  - pytorch-lightning==2.6.0
+  - torchmetrics==1.8.2
+  - logomaker==0.8.7
+  - python-docx==1.2.0
+  - python-dotenv==1.2.1
+  - pure_eval==0.2.3
+  - scikit-learn==1.0.2
+  - matplotlib==3.5.2
+  - matplotlib-inline==0.1.6
+  - seaborn>=0.13.2
+```

@@ -30,4 +30,5 @@ dependencies:
       - pure_eval==0.2.3
       - scikit-learn==1.0.2
       - matplotlib==3.5.2
+      - matplotlib-inline==0.1.6
       - seaborn>=0.13.2
